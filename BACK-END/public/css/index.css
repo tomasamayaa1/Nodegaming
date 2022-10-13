@@ -1,0 +1,126 @@
+/* ESTILOS INDEX */
+
+.container-carrusel {
+    width: 100%;
+    height: auto;
+    animation: slider1 15s infinite ease-in-out;
+}
+.container-carrusel .container-list-carrusel {
+    width: 400%;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+.container-list-carrusel li img {
+    width: 100%;
+}
+.publicidad {
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+.publicidad .container-publicidad {
+    width: 90%;
+}
+.container-publicidad img {
+    width: 100%;
+}
+.main h3 {
+    width: 25%;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    color: rgb(195, 149, 15, 0.7);
+}
+.container-destacados {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.destacados {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.destacados div {
+    width: 45%;
+    margin: 10px 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+.destacados div p {
+    font-size: 10px;
+    margin: 5px 0;
+    text-transform: uppercase;
+}
+.destacados div img{
+    width: 100%;
+}
+.container-partners {
+    width: 200%;
+    display: flex;
+    animation: slider2 15s infinite ease-in-out;
+}
+.container-partners div {
+    width: 15%;
+    padding: 0 10px;
+    margin: 0 10px;
+}
+.container-partners div img {
+    width: 100%;
+}
+
+@keyframes slider1 {
+    0%{margin-left: 0%;}
+    20%{margin-left: 0%;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+@keyframes slider2 {
+    0%{margin-left: 0%;}
+    20%{margin-left: -22%;}
+    40%{margin-left: -42%;}
+    60%{margin-left: -62%;}
+    80%{margin-left: -82%;}
+    100%{margin-left: -102%;}
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 769px) {
+    .destacados {
+        flex-wrap: nowrap;
+    }
+    .destacados div {
+        text-align: center;
+    }
+    .destacados div:hover {
+        box-shadow: 0px 0px 20px rgb(195, 149, 15, 0.7);
+        transition-duration: 0.5s;
+    }
+    .destacados div:hover p {
+        color: rgb(195, 149, 15, 0.7);
+        transition-duration: 0.5s;
+    }
+}
+@media (min-width: 1200px) {
+    .container-partners {
+        animation: none;        
+        width: 100%;
+        justify-content: space-around;
+    }
+    .container-partners div {
+        width: 5%;
+        padding: 0;
+        margin: 0;
+    }
+}
